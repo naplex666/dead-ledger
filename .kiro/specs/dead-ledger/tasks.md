@@ -19,7 +19,12 @@
 - [x] 7. Property-based tests: totals invariants (balance = in − out;
       stillOwed excludes settled) over randomized entry sets
   - _Requirements: 2 — tests/ledger.property.test.js, 300 sets per property_
-- [ ] 8. Deploy to GitHub Pages; verify the live URL on a phone viewport
+- [x] 8. Deploy to GitHub Pages; verify the live URL on a phone viewport
+  - _Done 11 Nov 2026: repo github.com/naplex666/dead-ledger (public),
+    Pages live at naplex666.github.io/dead-ledger — verified in a real
+    browser: totals In Rp850.000 / Out Rp275.000 / Balance Rp575.000 /
+    Owed Rp800.000, Today strip, form date = local today, Pak Dedi
+    kasbon flagged OVERDUE_
 - [ ] 9. Submission pack: README Kiro write-up, Devpost description,
       demo video (< 3 min, YouTube public)
   - _Drafts done in SUBMISSION.md; video + form paste remain_
