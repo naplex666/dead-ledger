@@ -1,0 +1,1 @@
+{"mcpServers":{"filesystem":{"args":["-y","@modelcontextprotocol/server-filesystem","."],"autoApprove":["list_directory","read_text_file","get_file_info"],"command":"npx","disabled":false,"env":{}}}}

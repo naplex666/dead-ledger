@@ -1,0 +1,1 @@
+{"hooks":[{"action":{"command":"node --test","type":"command"},"name":"run-ledger-tests-on-stop","trigger":"Stop"}],"version":"v1"}

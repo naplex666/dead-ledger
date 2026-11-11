@@ -1,0 +1,1 @@
+{"hooks":[{"action":{"command":"python3 -m json.tool {{filePath}} > /dev/null && echo valid","type":"command"},"matcher":"\\.kiro/.*\\.json$","name":"validate-kiro-config-json","trigger":"PostFileSave"}],"version":"v1"}

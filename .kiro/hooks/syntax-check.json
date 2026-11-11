@@ -1,0 +1,1 @@
+{"hooks":[{"action":{"command":"node --check {{filePath}}","type":"command"},"matcher":"\\.js$","name":"js-syntax-check-on-save","trigger":"PostFileSave"}],"version":"v1"}

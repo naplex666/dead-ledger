@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dead Ledger — The Paper Kas Book, Resurrected</title>
+<meta name="description" content="Dead Ledger brings the dead paper buku kas back to life: track money in, money out, and who still owes you — offline, private, no account.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="ghost" aria-hidden="true">👻</div>
+  <h1>Dead Ledger</h1>
+  <p class="tagline">The paper <em>buku kas</em> is dead. This is its ghost — it remembers every rupiah, and everyone who still owes you.</p>
+</header>
+
+<main>
+  <section class="cards" aria-label="Summary">
+    <div class="card"><span class="label">Money in</span><span class="value in" id="total-in">Rp0</span></div>
+    <div class="card"><span class="label">Money out</span><span class="value out" id="total-out">Rp0</span></div>
+    <div class="card"><span class="label">Balance</span><span class="value" id="total-balance">Rp0</span></div>
+    <div class="card owed-card"><span class="label">Still owed to you</span><span class="value owed" id="total-owed">Rp0</span></div>
+  </section>
+
+  <section class="today-strip" aria-label="Today">
+    <span class="today-label">Today</span>
+    <span>In <strong class="in" id="today-in">Rp0</strong></span>
+    <span>Out <strong class="out" id="today-out">Rp0</strong></span>
+    <span>Net <strong id="today-net">Rp0</strong></span>
+  </section>
+
+  <section class="panel">
+    <h2>Write in the book</h2>
+    <form id="entry-form">
+      <label>Type
+        <select id="f-type">
+          <option value="income">Money in</option>
+          <option value="expense">Money out</option>
+          <option value="receivable">Someone owes me (kasbon)</option>
+        </select>
+      </label>
+      <label>What for?
+        <input id="f-desc" type="text" placeholder="e.g. Painting job — front fence" required>
+      </label>
+      <label>Who? <span class="hint">(needed when someone owes you)</span>
+        <input id="f-person" type="text" placeholder="e.g. Bu Sari (warung)">
+      </label>
+      <label>Amount (Rp)
+        <input id="f-amount" type="text" inputmode="numeric" placeholder="e.g. 250000 or 250.000" required>
+      </label>
+      <label>Date
+        <input id="f-date" type="date" required>
+      </label>
+      <label id="due-wrap" style="display:none">Due date <span class="hint">(kasbon only)</span>
+        <input id="f-due" type="date">
+      </label>
+      <button type="submit" class="primary">✒️ Write it in</button>
+      <p id="form-msg" class="msg" role="status"></p>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="ledger-head">
+      <h2>The book</h2>
+      <div class="filters" role="group" aria-label="Filter entries">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="income">In</button>
+        <button class="filter-btn" data-filter="expense">Out</button>
+        <button class="filter-btn" data-filter="owed">Owed to me</button>
+      </div>
+    </div>
+    <ul id="ledger-list"></ul>
+    <button id="clear-demo" class="danger subtle">Burn the book (clear everything)</button>
+  </section>
+</main>
+
+<footer>
+  <p>Your book lives only in this browser — no account, no server, no signal needed. The dead keep your secrets.</p>
+  <p class="credit">Built with Kiro for Kiroween 2026 · Category: Resurrection</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
